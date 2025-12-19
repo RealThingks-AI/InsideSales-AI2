@@ -107,7 +107,7 @@ const Meetings = () => {
   };
   const getSortIcon = (column: SortColumn) => {
     if (sortColumn !== column) {
-      return <ArrowUpDown className="h-4 w-4 ml-1 opacity-50" />;
+      return <ArrowUpDown className="h-4 w-4 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />;
     }
     return sortDirection === 'asc' ? <ArrowUp className="h-4 w-4 ml-1" /> : <ArrowDown className="h-4 w-4 ml-1" />;
   };
@@ -353,27 +353,27 @@ const Meetings = () => {
                   }} onCheckedChange={handleSelectAll} aria-label="Select all" />
                     </TableHead>
                     <TableHead>
-                      <button onClick={() => handleSort('subject')} className="flex items-center hover:text-foreground transition-colors">
+                      <button onClick={() => handleSort('subject')} className="group flex items-center hover:text-foreground transition-colors">
                         Subject {getSortIcon('subject')}
                       </button>
                     </TableHead>
                     <TableHead>
-                      <button onClick={() => handleSort('date')} className="flex items-center hover:text-foreground transition-colors">
+                      <button onClick={() => handleSort('date')} className="group flex items-center hover:text-foreground transition-colors">
                         Date {getSortIcon('date')}
                       </button>
                     </TableHead>
                     <TableHead>
-                      <button onClick={() => handleSort('time')} className="flex items-center hover:text-foreground transition-colors">
+                      <button onClick={() => handleSort('time')} className="group flex items-center hover:text-foreground transition-colors">
                         Time {getSortIcon('time')}
                       </button>
                     </TableHead>
                     <TableHead>
-                      <button onClick={() => handleSort('lead_contact')} className="flex items-center hover:text-foreground transition-colors">
+                      <button onClick={() => handleSort('lead_contact')} className="group flex items-center hover:text-foreground transition-colors">
                         Lead/Contact {getSortIcon('lead_contact')}
                       </button>
                     </TableHead>
                     <TableHead>
-                      <button onClick={() => handleSort('status')} className="flex items-center hover:text-foreground transition-colors">
+                      <button onClick={() => handleSort('status')} className="group flex items-center hover:text-foreground transition-colors">
                         Status {getSortIcon('status')}
                       </button>
                     </TableHead>

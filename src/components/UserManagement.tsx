@@ -406,35 +406,35 @@ const UserManagement = () => {
                     <TableHead className="w-12">
                       <Checkbox checked={selectedUsers.length === filteredAndSortedUsers.length && filteredAndSortedUsers.length > 0} onCheckedChange={handleSelectAll} />
                     </TableHead>
-                    <TableHead className="cursor-pointer" onClick={() => handleSort('name')}>
+                    <TableHead className="cursor-pointer group" onClick={() => handleSort('name')}>
                       <div className="flex items-center gap-1">
                         Display Name
-                        <ArrowUpDown className="h-3 w-3" />
+                        <ArrowUpDown className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
                     </TableHead>
-                    <TableHead className="cursor-pointer" onClick={() => handleSort('email')}>
+                    <TableHead className="cursor-pointer group" onClick={() => handleSort('email')}>
                       <div className="flex items-center gap-1">
                         Email
-                        <ArrowUpDown className="h-3 w-3" />
+                        <ArrowUpDown className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
                     </TableHead>
-                    <TableHead className="cursor-pointer" onClick={() => handleSort('role')}>
+                    <TableHead className="cursor-pointer group" onClick={() => handleSort('role')}>
                       <div className="flex items-center gap-1">
                         Role
-                        <ArrowUpDown className="h-3 w-3" />
+                        <ArrowUpDown className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
                     </TableHead>
                     <TableHead>Status</TableHead>
-                    <TableHead className="cursor-pointer" onClick={() => handleSort('last_sign_in_at')}>
+                    <TableHead className="cursor-pointer group" onClick={() => handleSort('last_sign_in_at')}>
                       <div className="flex items-center gap-1">
                         Last Login
-                        <ArrowUpDown className="h-3 w-3" />
+                        <ArrowUpDown className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
                     </TableHead>
-                    <TableHead className="cursor-pointer" onClick={() => handleSort('created_at')}>
+                    <TableHead className="cursor-pointer group" onClick={() => handleSort('created_at')}>
                       <div className="flex items-center gap-1">
                         Created At
-                        <ArrowUpDown className="h-3 w-3" />
+                        <ArrowUpDown className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                       </div>
                     </TableHead>
                     <TableHead className="text-center">Actions</TableHead>

@@ -162,7 +162,7 @@ export const ContactTableBody = ({
   };
 
   const getSortIcon = (field: string) => {
-    if (sortField !== field) return <ArrowUpDown className="w-4 h-4" />;
+    if (sortField !== field) return <ArrowUpDown className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />;
     return sortDirection === 'asc' ? <ArrowUp className="w-4 h-4" /> : <ArrowDown className="w-4 h-4" />;
   };
 
@@ -247,7 +247,7 @@ export const ContactTableBody = ({
                   className="h-auto p-0 font-bold hover:bg-transparent w-full justify-start text-foreground"
                   onClick={() => onSort(column.field)}
                 >
-                  <div className="flex items-center gap-2">
+                  <div className="group flex items-center gap-2">
                     {column.label}
                     {getSortIcon(column.field)}
                   </div>
