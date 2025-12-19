@@ -427,16 +427,6 @@ export const AccountModal = ({ open, onOpenChange, account, onSuccess }: Account
                   </div>
                 </PopoverContent>
               </Popover>
-              {selectedTags.length > 0 && (
-                <div className="flex flex-wrap gap-1">
-                  {selectedTags.map((tag) => (
-                    <Badge key={tag} variant="default" className="text-xs cursor-pointer" onClick={() => toggleTag(tag)}>
-                      {tag}
-                      <X className="w-3 h-3 ml-1" />
-                    </Badge>
-                  ))}
-                </div>
-              )}
             </div>
 
             <FormField
